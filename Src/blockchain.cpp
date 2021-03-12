@@ -35,6 +35,10 @@ class Block {
             bool isHashvalid();
 };
 
+Block::Block(int idx, TransactionData d, size_t prevHash) {
+    
+}
+
 class Blockchain {
     private:
         
@@ -47,8 +51,13 @@ class Blockchain {
 
         Blockchain();
 
+
+        void addBlock(TransactionData data);
+        void isChainValid();
+
+        Block *getLatestBlock();
 };
 
 int main() {
-    
+
 }
