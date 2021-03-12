@@ -34,3 +34,15 @@ class Block {
 
             bool isHashvalid();
 };
+
+class Blockchain {
+    private:
+        
+        Block createGenesisBlock();
+
+
+    public:
+
+        
+
+};
