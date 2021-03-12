@@ -43,6 +43,12 @@ class Blockchain {
 
     public:
 
-        
+        vector<Block> chain;
+
+        Blockchain();
 
 };
+
+int main() {
+    
+}
