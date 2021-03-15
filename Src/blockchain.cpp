@@ -75,8 +75,6 @@ bool Block::isHashValid() {
 }
 
 
-
-
 class Blockchain {
     private:
         
@@ -94,3 +92,20 @@ class Blockchain {
         Block *getLatestBlock();
 
 };
+
+Blockchain::Blockchain() {
+    
+    Block genesis = createGenesisBlock();
+
+    chain.push_back(genesis);
+
+}
+
+Block Blockchain::createGenesisBlock() {
+    
+    time_t current;
+
+    
+
+
+}
