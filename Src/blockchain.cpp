@@ -161,4 +161,10 @@ bool Blockchain::isChainValid() {
 
     }
 
+    return true;
+
+}
+
+int main() {
+    
 }
