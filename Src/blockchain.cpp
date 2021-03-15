@@ -183,4 +183,19 @@ int main() {
     cout << "Is Chain Valid?" << endl
         << Coin.isChainValid() <<endl;
     
+
+    TransactionData data2;
+
+    time_t data2Time;
+
+    data2.amount = 0.00013322;
+    data2.receiverKey = "H";
+    data2.senderKey = "Phantom";
+    data2.timestamp = time(&data2Time);
+
+    Coin.addBlock(data2); 
+
+    cout << "Now Is the Chain Valid?" << endl
+        << Coin.isChainValid() <<endl;
+
 }
