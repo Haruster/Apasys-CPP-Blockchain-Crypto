@@ -169,5 +169,18 @@ int main() {
     
     Blockchain Coin;
 
+    TransactionData data1;
+
+    time_t data1Time;
+
+    data1.amount = 1.5;
+    data1.receiverKey = "K";
+    data1.senderKey = "Phantester";
+    data1.timestamp = time(&data1Time);
+
+    Coin.addBlock(data1);
+
+    cout << "Is Chain Valid?" << endl
+        << Coin.isChainValid() <<endl;
     
 }
