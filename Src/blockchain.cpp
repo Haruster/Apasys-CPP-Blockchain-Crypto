@@ -20,7 +20,7 @@ class Block {
 
         size_t blockHash;
         size_t previousHash;
-        size_t generateHash;
+        size_t generateHash();
 
         public:
 
@@ -62,7 +62,9 @@ size_t Block::getHash() {
 
 }
 
+size_t Block::getpreviousHash() {
 
+}
 
 
 class Blockchain {
