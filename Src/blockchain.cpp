@@ -10,7 +10,7 @@ struct TransactionData {
     string senderKey;
     string receiverKey;
     time_t timestamp;
-}
+};
 
 class Block {
 
@@ -166,5 +166,8 @@ bool Blockchain::isChainValid() {
 }
 
 int main() {
+    
+    Blockchain Coin;
+
     
 }
