@@ -125,5 +125,12 @@ Block * Blockchain::getLatestBlock() {
 }
 
 void Blockchain::addBlock(TransactionData d) {
+
+    int index = (int)chain.size() - 1;
+    Block newBlock(index, d, getLatestBlock() -> getHash());
+
+}
+
+bool Blockchain::isChainValid() {
     
 }
