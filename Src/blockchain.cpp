@@ -64,7 +64,17 @@ size_t Block::getHash() {
 
 size_t Block::getpreviousHash() {
 
+    return previousHash;
+
 }
+
+bool Block::isHashValid() {
+
+    return generateHash() == blockHash;
+
+}
+
+
 
 
 class Blockchain {
