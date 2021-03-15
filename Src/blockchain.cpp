@@ -204,6 +204,7 @@ int main() {
     hackBlock -> data.amount = 10000;
     hackBlock -> data.receiverKey = "Kinesys - from Crypto Enthusiasts";
 
-    
+    cout << " Now is the chain still valid?????" << endl;
+    cout <<
 
 }
