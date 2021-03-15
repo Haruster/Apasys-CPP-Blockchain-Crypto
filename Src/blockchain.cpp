@@ -87,7 +87,7 @@ class Blockchain {
         Blockchain();
 
         void addBlock(TransactionData data);
-        void isChainValid();
+        bool isChainValid();
 
         Block *getLatestBlock();
 
@@ -149,7 +149,13 @@ bool Blockchain::isChainValid() {
 
         if(chainLen > 1) {
 
-            
+            Block previousBlock = *(it - 1);
+
+            if (currentBlock.getpreviousHash() != previousBlock.getHash()) {
+
+                return false;
+
+            }
 
         }
 
