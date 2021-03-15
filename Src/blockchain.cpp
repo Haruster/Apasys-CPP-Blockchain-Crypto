@@ -4,20 +4,20 @@
 
 using namespace std;
 
-//Transaction Data
 struct TransactionData {
 
     double amount;
     string senderKey;
     string receiveKey;
     time_t timestamp;
-
 }
 
 class Block {
+
     private:
 
         int index;
+
         size_t blockHash;
         size_t previousHash;
         size_t generateHash;
@@ -27,23 +27,26 @@ class Block {
             Block(int idx, TransactionData d, size_t prevHash);
 
             size_t getHash();
-
-            size_t getPreviousHash();
+            
+            size_t getpreviousHash();
 
             TransactionData data;
 
-            bool isHashvalid();
+            bool isHashValid();
 };
 
+
 Block::Block(int idx, TransactionData d, size_t prevHash) {
+
     
+
 }
+
 
 class Blockchain {
     private:
         
         Block createGenesisBlock();
-
 
     public:
 
@@ -51,13 +54,9 @@ class Blockchain {
 
         Blockchain();
 
-
         void addBlock(TransactionData data);
         void isChainValid();
 
         Block *getLatestBlock();
+
 };
-
-int main() {
-
-}
