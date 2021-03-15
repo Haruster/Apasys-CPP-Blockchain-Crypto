@@ -132,5 +132,15 @@ void Blockchain::addBlock(TransactionData d) {
 }
 
 bool Blockchain::isChainValid() {
-    
+
+    vector<Block>::iterator it;
+
+    int chainLen = (int)chain.size();
+
+    for(it = chain.begin(); it != chain.end(); ++it) {
+
+        
+
+    }
+
 }
