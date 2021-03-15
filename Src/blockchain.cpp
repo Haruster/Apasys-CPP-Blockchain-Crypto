@@ -104,8 +104,26 @@ Blockchain::Blockchain() {
 Block Blockchain::createGenesisBlock() {
     
     time_t current;
-
     
+    TransactionData d;
+    
+    d.amount = 0;
+    d.receiverKey = "None";
+    d.senderKey = "None";
+    d.timestamp = time(&current);
 
+    hash<int> hash1;
 
+    Block genesis(0, d, hash1(0));
+    return genesis;
+}
+
+Block * Blockchain::getLatestBlock() {
+    
+    return &chain.back();
+
+}
+
+void Blockchain::addBlock(TransactionData d) {
+    
 }
