@@ -139,7 +139,19 @@ bool Blockchain::isChainValid() {
 
     for(it = chain.begin(); it != chain.end(); ++it) {
 
-        
+        Block currentBlock = *it;
+
+        if(!currentBlock.isHashValid()) {
+
+            return false;
+
+        }       
+
+        if(chainLen > 1) {
+
+            
+
+        }
 
     }
 
