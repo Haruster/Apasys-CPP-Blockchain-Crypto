@@ -8,7 +8,7 @@ struct TransactionData {
 
     double amount;
     string senderKey;
-    string receiveKey;
+    string receiverKey;
     time_t timestamp;
 }
 
@@ -38,9 +38,31 @@ class Block {
 
 Block::Block(int idx, TransactionData d, size_t prevHash) {
 
-    
+    index = idx;
+    data = d;
+    previousHash = prevHash;
+    blockHash = generateHash();
 
 }
+
+size_t Block::generateHash() {
+
+    hash<string> hash1;
+    hash<size_t> hash2;
+    hash<size_t> finalHash;
+    string toHash = to_string(data.amount) + data.receiverKey + data.senderKey + to_string(data.timestamp);
+
+    return finalHash(hash(toHash) + hash2(previousHash));
+
+};
+
+size_t Block::getHash() {
+
+    return blockHash;
+
+}
+
+
 
 
 class Blockchain {
