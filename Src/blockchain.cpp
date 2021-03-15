@@ -198,4 +198,12 @@ int main() {
     cout << "Now Is the Chain Valid?" << endl
         << Coin.isChainValid() <<endl;
 
+
+    Block *hackBlock = Coin.getLatestBlock();
+    
+    hackBlock -> data.amount = 10000;
+    hackBlock -> data.receiverKey = "Kinesys - from Crypto Enthusiasts";
+
+    
+
 }
